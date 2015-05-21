@@ -1,0 +1,30 @@
+{
+  "name": "p2p-lobby-experiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p2papp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify p2papp.js | indexhtmlify > public/index.html",
+    "start": "node server.js"
+  },
+  "browserify": {
+    "transform": [
+      "./browserify-transform.js"
+    ]
+  },
+  "keywords": ["p2p", "webrtc"],
+  "author": "Patrick Pfeiffer <patrick@buzzle.at>",
+  "license": "MIT",
+  "dependencies": {
+    "hat": "0.0.3",
+    "simple-peer": "^5.9.0",
+    "through": "^2.3.7",
+    "ws": "^0.7.2"
+  },
+  "devDependencies": {
+    "indexhtmlify": "^1",
+    "browserify": "^10",
+    "through": "^2"
+  }
+}

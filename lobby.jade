@@ -1,0 +1,18 @@
+button.box.joinLobby join
+button.box.leaveLobby leave
+.peers
+  - each peer in lobby.peers
+    - if (peer == localPeerId)
+      .peer.box.localPeer(data-peer-id=peer)
+        .avatar
+          .status.connecting ☎
+          .status.opt.ready(class=classes, title="everyone has to click ready, to start the game") ☒
+          .status.opt.notready(class=classes, title="click again if you are not ready") ☑
+    - else
+      .peer.box(data-peer-id=peer)
+        .avatar
+.clearBoth
+.chat
+  .messages
+  input.input
+  button.send send

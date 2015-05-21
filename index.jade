@@ -1,0 +1,47 @@
+#wrapper
+  style.
+    body {margin:0}
+    .clearBoth {clear:both;}
+    #wrapper {position:absolute; top:0; left:0; width:100%; height:100%; display:block}
+    #wrapper .welcomeContainer {width:300px;}
+    #wrapper .welcomeContainer .welcome {margin:10px;}
+    #wrapper .lobbiesContainer {position:absolute; left:300px; top:0; right:0; bottom:0; background:yellow;}
+    #wrapper .lobbies .lobby {background:gray; margin: 2px;}
+    #wrapper .lobbies .lobby .box {width:40px; height:40px; position:relative; float:left; margin:2px;}
+    #wrapper .lobbies .lobby .peer {}
+    #wrapper .lobbies .lobby .avatar {position:absolute; width:100%; height:100%; background-size:cover; background-image:url("./default_avatar.png")}
+    #wrapper .lobbies .lobby .status {position:absolute; bottom:-4pt; right:-2pt;}
+    #wrapper .lobbies .lobby .opt {cursor:pointer}
+    #wrapper .lobbies .lobby .status.ready, .status.connecting {display:none}
+    #wrapper .lobbies .lobby .peer.connecting .status.connecting {display:block}
+    #wrapper .lobbies .lobby .peer.connecting .status.ready, .status.notready {display:none}
+    #wrapper .lobbies .lobby .peer.ready .status.ready {display:block}
+    #wrapper .lobbies .lobby .peer.ready .status.notready, .status.connecting {display:none}
+    #wrapper .lobbies .lobby .joinLobby {display:block}
+    #wrapper .lobbies .lobby .leaveLobby {display:none}
+    #wrapper .lobbies .lobby .chat {display:none}
+    #wrapper .lobbies .lobby.inLobby .chat {display:block}
+    #wrapper .lobbies .lobby.inLobby .joinLobby {display:none}
+    #wrapper .lobbies .lobby.inLobby .leaveLobby {display:block}
+    #wrapper .game {display:none}
+    #wrapper .game .renderer {position:absolute; top:0; left:200px; right:0; bottom:0}
+    #wrapper .game .renderer canvas {position:absolute; top:0; left:0; width:100%; height:100%}
+    #wrapper .game .menu {position:absolute; top:0; left:0; width:200px; height:100%}
+  .welcomeContainer
+    .welcome
+      p welcome to <b><i>p2p-lobby-experiment</i></b>!
+      p.
+        to join a lobby just click on a <i>join</i>-button, or create
+        a new lobby by clicking on the <i>create</i>-button.
+      p once you are connected through webrtc you could chat with each other (if this would have been finished).
+      p this is just an experiment, and totaly not finished.. im working on something better.
+  .lobbiesContainer
+    .menu
+      button.createLobby create
+    .lobbies
+  .game
+    .menu
+      .leaderboard
+      .creatures
+    .renderer
+  .chat
